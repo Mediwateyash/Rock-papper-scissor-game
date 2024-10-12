@@ -1,9 +1,5 @@
 # Rock-papper-scissor-game
-Here’s the README file for your Rock-Paper-Scissors project, following the established format:
-
 ---
-
-# Rock-Paper-Scissors Game
 
 Created by Diwate Yash
 
