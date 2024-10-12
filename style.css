@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+h1{
+    background-color: #6256CA;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;    
+}
+.choice{
+    height: 200px;
+    width: 200px;
+
+} 
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.choices{
+    display: flex;
+    justify-content: centre;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.choice :hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+
+}
