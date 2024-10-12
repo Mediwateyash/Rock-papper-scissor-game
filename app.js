@@ -1,9 +1,13 @@
+
 let userScore = 0;
 let compScore = 0;
 
 
 const msg = document.querySelector("#msg")
 const choices = document.querySelectorAll(".choice");
+
+const userScorepara = document.querySelector("#userscore")
+const compScorepara = document.querySelector("#compscore")
 
 // Generate a random computer choice
 const genCompChoice = () => {
@@ -21,12 +25,15 @@ const drawGame = () => {
 
 const showWinner = (userwin , userChoice , compChoice) => {
     if (userwin) {
-        console.log("You won the game.");
-        msg.innerText = `You Win! ${userChoice} beats ${compChoice}`;
+        userScore++;
+        userScorepara.innerText = userScore;
+ 
+        msg.innerText = `You Win! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor="green"
     } else {
-        console.log("Computer won the game.");
-        msg.innerText = `You Lose. ${compChoice} beats ${userChoice}`
+        compScore++;
+        compScorepara.innerText = compScore;
+        msg.innerText = `You Lose. ${compChoice} beats Your ${userChoice}`
         msg.style.backgroundColor= "red"
     } 
     
