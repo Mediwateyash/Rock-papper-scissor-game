@@ -15,6 +15,12 @@ h1{
 .choice{
     height: 200px;
     width: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    border: black 10px;
 
 } 
 img {
@@ -25,14 +31,43 @@ img {
 }
 .choices{
     display: flex;
-    justify-content: centre;
+    justify-content:center;
     align-items: center;
     gap: 2rem;
     margin-top: 2rem;
+
 }
 .choice :hover{
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.3s ease;
+    background-color: black;
+}
 
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#userscore ,
+#compscore {
+    font-size: 4rem;
+}
+
+.msgcont{
+    margin-top: 5rem;
+}
+
+#msg{
+
+    margin-top: 2rem;
+    display: inline;
+    font-size: 2rem;
+    background-color:#86D293 ;
+    padding: 1rem;
+    border-radius: 10px;
 }
