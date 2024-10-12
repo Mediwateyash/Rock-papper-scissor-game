@@ -1,30 +1,38 @@
 let userScore = 0;
 let compScore = 0;
 
+
+const msg = document.querySelector("#msg")
 const choices = document.querySelectorAll(".choice");
 
 // Generate a random computer choice
 const genCompChoice = () => {
-    const option = ["rock", "paper", "scissor"];
+    const option = ["Rock", "Paper", "Scissor"];
     const randIdx = Math.floor(Math.random() * 3);
     return option[randIdx];
 };
 
 const drawGame = () => {
     console.log("Game was draw.");
+    msg.innerText = "Game was draw."
+    msg.style.backgroundColor="#6256CA";
     
 }
 
-const showWinner = (userwin) => {
+const showWinner = (userwin , userChoice , compChoice) => {
     if (userwin) {
         console.log("You won the game.");
+        msg.innerText = `You Win! ${userChoice} beats ${compChoice}`;
+        msg.style.backgroundColor="green"
     } else {
         console.log("Computer won the game.");
+        msg.innerText = `You Lose. ${compChoice} beats ${userChoice}`
+        msg.style.backgroundColor= "red"
     } 
     
 }
 // Function to play the game
-const playGame = (userChoice) => {
+const playGame = (userChoice ) => {
     console.log("user choice = ", userChoice);
     
     // Generate computer choice
@@ -35,14 +43,14 @@ const playGame = (userChoice) => {
         drawGame();
     } else {
         let userwin = true
-        if (userChoice === "rock") {
-            userwin = compChoice === "paper"? false: true
-        } else if (userChoice === "paper") {
-            userwin = compChoice === "scissor"? false: true
-        } else if (userChoice === "scissor") {
-            userwin = compChoice === "rock" ? false : true;
+        if (userChoice === "Rock") {
+            userwin = compChoice === "Paper"? false: true
+        } else if (userChoice === "Paper") {
+            userwin = compChoice === "Scissor"? false: true
+        } else if (userChoice === "Scissor") {
+            userwin = compChoice === "Rock" ? false : true;
         }
-        showWinner(userwin);
+        showWinner(userwin  , userChoice , compChoice);
     }
 };
     
