@@ -72,3 +72,20 @@ img {
     padding: 1rem;
     border-radius: 10px;
 }
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+
+footer p , a{
+    color: #7b73c2;
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 1rem;
+
+}
